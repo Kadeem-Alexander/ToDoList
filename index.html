@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>To Do List</title>
+
+  <!-- links go here -->
+  <link rel="stylesheet" href="css/clearfix.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <!-- Page Content Goes here -->
+  <main id="page__content" class="page__content">
+    <div class="content__container">
+      <h1 id="page__title">to do list</h1>
+
+      <!-- enter todo item section starts-->
+      <div class="app__section form__section">
+        <h2 class="app__title">add item</h2>
+        <form action="index.html" method="post" id="task-add-form">
+          <input type="text" name="task-adder" id="task-add-input" maxlength="50" autocomplete="off">
+          <button type="submit" id="task-add-btn">Add Task</button>
+        </form>
+      </div>
+      <!-- enter todo item section ends-->
+
+      <hr class="app__divider">
+      
+      <!-- todo list section starts-->
+      <div class="app__section list__section">
+        <h2 class="app__title">Tasks</h2>
+
+        <!-- holds list of to do items -->
+        <ul class="todo__list">
+
+          <li class="todo__item">
+            <p class="todo__text center__content">Item 1</p>
+            <p class="delete__text center__content">x</p>
+          </li>
+          <li class="todo__item">
+            <p class="todo__text center__content">Item 2</p>
+            <p class="delete__text center__content">x</p>
+          </li>
+          <li class="todo__item">
+            <p class="todo__text center__content">Item 3</p>
+            <p class="delete__text center__content">x</p>
+          </li>
+          <li class="todo__item">
+            <p class="todo__text center__content">Item 4</p>
+            <p class="delete__text center__content">x</p>
+          </li>
+          <li class="todo__item">
+            <p class="todo__text center__content">Item 5</p>
+            <p class="delete__text center__content">x</p>
+          </li>
+
+        </ul>
+
+      </div>
+      <!-- todo list section ends -->
+
+      <hr class="app__divider">
+
+      <!-- holds controls for the to do list -->
+      <div class="app__section controls__section">
+        <button id="delete-all-btn">Delete All</button>
+      </div>
+    </div>
+  </main>
+  <!-- Page Content Ends -->
+
+  <script src="src/todo.manager.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>

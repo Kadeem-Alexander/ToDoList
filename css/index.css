@@ -1,0 +1,184 @@
+/* Define Base Variables That will be reused */
+:root{
+  /* variables */
+  /* colors */
+  --tiffany-blue: #2ec4b6ff;
+  --aero-blue: #b8f2e6ff;
+  --rose-madder: #e71d36ff;
+  /* --melon: #ffa69eff; */
+  --melon: rgb(250, 109, 96);
+
+  --manatee: #8e9aafff;
+  --languid-lavender: #cbc0d3ff;
+  --pale-pink: #efd3d7ff;
+  --pale-purple-pantone: #feeafaff;
+  --lavender-web: #dee2ffff;
+}
+
+body{
+  background-color: var(--manatee);
+}
+
+/* ################################# */
+/* ###### PAGE CONTENT STYLES ###### */
+/* ################################# */
+
+.page__content{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 1.5rem 0;
+
+  background-color: inherit;
+}
+
+.content__container{
+  position: relative;
+  width: fit-content;
+  width: 90%;
+  max-width: 500px;
+  height: 100%;
+  max-height: 100%;
+
+  margin: 0 auto;
+  padding: .75rem 1rem;
+
+  display: flex;
+  flex-direction: column;
+  background-color: var(--lavender-web);
+  border-radius: 1rem;
+}
+
+/* ################################# */
+/* ##### APP COMPONENT STYLES ###### */
+/* ################################# */
+
+#page__title{
+  margin: 0 0 .5rem;
+  font-size: 1.75rem;
+  text-transform: capitalize;
+}
+
+.app__section{
+  margin: 0;
+}
+.app__title{
+  margin: 0 0 .5rem;
+  font-size: 1.25rem;
+  text-transform: capitalize;
+}
+
+/* ################################## */
+/* ###  TASK ADDITION FORM STYLES ### */
+/* ################################## */
+
+#task-add-form{
+  display: flex;
+  flex-direction: row;
+}
+#task-add-form > *{
+  padding: .5rem .25rem;
+  outline: none;
+}
+#task-add-input{
+  border-radius: .5rem 0 0 .5rem;
+}
+#task-add-btn{
+  border-radius: 0 .5rem .5rem 0;
+  background-color: var(--aero-blue);
+  color: black;
+}
+#task-add-btn:hover,
+#task-add-btn:active{
+  border-radius: 0 .5rem .5rem 0;
+  background-color: var(--tiffany-blue);
+  color: white;
+}
+
+/* ################################## */
+/* ### HORIXZONTAL dIVIDER STYLES ### */
+/* ################################## */
+
+.app__divider{
+  width: calc(100% + 1.5rem);
+  height: .2rem;
+  background-color:black;
+  margin: .5rem 0 .5rem -.75rem;
+}
+
+/* ################################# */
+/* ##### LIST SECTION STYLES ####### */
+/* ################################# */
+
+.list__section{
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+.todo__list{
+  flex-grow: 1;
+  background-color: var(--languid-lavender);
+  border-radius: .5rem;
+  overflow-y: scroll;
+}
+.todo__item{
+  max-width: 100%;
+  margin: .5rem .5rem 0 .5rem;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+.todo__text{
+  display: block;
+  flex-grow: 1;
+  padding: .5rem;
+
+  background-color: var(--pale-pink);
+  border-radius: .5rem 0 0 .5rem;
+}
+.delete__text{
+  width: 2rem;
+  min-width: 2rem;
+  background-color: var(--melon);
+  color: white;
+  font-size: 2rem;
+  border-radius: 0 .5rem .5rem 0;
+  cursor: pointer;
+}
+.delete__text:hover,
+.delete__text:active{
+  background-color: var(--rose-madder);
+  color: white;
+}
+
+/* ################################# */
+/* ##### LIST CONTROLS STYLES ###### */
+/* ################################# */
+
+#delete-all-btn{
+  padding: .25rem .5rem;
+  background-color: var(--melon);
+  font-size: 1.2rem;
+  color: white;
+
+  border-radius: .25rem;
+  cursor: pointer;
+}
+#delete-all-btn:hover,
+#delete-all-btn:active{
+  background-color: var(--rose-madder);
+  color: white;
+}
+
+/* ################################# */
+/* ##### COMMON ELEMENT STYLES ##### */
+/* ################################# */
+.center__content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
