@@ -1,5 +1,5 @@
 /* Define Base Variables That will be reused */
-:root{
+:root {
   /* variables */
   /* colors */
   --tiffany-blue: #2ec4b6ff;
@@ -15,7 +15,7 @@
   --lavender-web: #dee2ffff;
 }
 
-body{
+body {
   background-color: var(--manatee);
 }
 
@@ -23,7 +23,7 @@ body{
 /* ###### PAGE CONTENT STYLES ###### */
 /* ################################# */
 
-.page__content{
+.page__content {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -32,7 +32,7 @@ body{
   background-color: inherit;
 }
 
-.content__container{
+.content__container {
   position: relative;
   width: fit-content;
   width: 90%;
@@ -41,7 +41,7 @@ body{
   max-height: 100%;
 
   margin: 0 auto;
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
 
   display: flex;
   flex-direction: column;
@@ -53,17 +53,17 @@ body{
 /* ##### APP COMPONENT STYLES ###### */
 /* ################################# */
 
-#page__title{
-  margin: 0 0 .5rem;
+#page__title {
+  margin: 0 0 0.5rem;
   font-size: 1.75rem;
   text-transform: capitalize;
 }
 
-.app__section{
+.app__section {
   margin: 0;
 }
-.app__title{
-  margin: 0 0 .5rem;
+.app__title {
+  margin: 0 0 0.5rem;
   font-size: 1.25rem;
   text-transform: capitalize;
 }
@@ -72,112 +72,133 @@ body{
 /* ###  TASK ADDITION FORM STYLES ### */
 /* ################################## */
 
-#task-add-form{
+#task-add-form {
   display: flex;
   flex-direction: row;
 }
-#task-add-form > *{
-  padding: .5rem .25rem;
+#task-add-form > * {
+  padding: 0.5rem 0.25rem;
   outline: none;
 }
-#task-add-input{
-  border-radius: .5rem 0 0 .5rem;
+#task-add-input {
+  border-radius: 0.5rem 0 0 0.5rem;
 }
-#task-add-btn{
-  border-radius: 0 .5rem .5rem 0;
+#task-add-input:hover,
+#task-add-input:focus {
+  outline: 0.15rem solid #454545;
+}
+#task-add-btn {
+  border-radius: 0 0.5rem 0.5rem 0;
   background-color: var(--aero-blue);
   color: black;
 }
 #task-add-btn:hover,
-#task-add-btn:active{
-  border-radius: 0 .5rem .5rem 0;
+#task-add-btn:focus {
+  border-radius: 0 0.25rem 0.25rem 0;
   background-color: var(--tiffany-blue);
   color: white;
+  outline: 0.15rem solid black;
 }
 
 /* ################################## */
 /* ### HORIXZONTAL dIVIDER STYLES ### */
 /* ################################## */
 
-.app__divider{
+.app__divider {
   width: calc(100% + 1.5rem);
-  height: .2rem;
-  background-color:black;
-  margin: .5rem 0 .5rem -.75rem;
+  height: 0.2rem;
+  background-color: black;
+  margin: 0.5rem 0 0.5rem -0.75rem;
 }
 
 /* ################################# */
 /* ##### LIST SECTION STYLES ####### */
 /* ################################# */
 
-.list__section{
+.list__section {
   flex-grow: 1;
 
   display: flex;
   flex-direction: column;
   overflow-y: hidden;
 }
-.todo__list{
+.todo__list {
+  padding: 0.5rem;
   flex-grow: 1;
   background-color: var(--languid-lavender);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   overflow-y: scroll;
 }
-.todo__item{
+.todo__item {
+  width: 100%;
   max-width: 100%;
-  margin: .5rem .5rem 0 .5rem;
-  padding: 0;
+  margin: 0 auto 0.5rem;
+  padding: 0.25rem;
 
   display: flex;
   flex-direction: row;
-  align-items: stretch;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.5rem;
 }
-.todo__text{
-  display: block;
+.todo__checkbox {
+  display: none; /*Hidden till i find a way to save value in web storage*/
+  width: 40px;
+  max-width: 40px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  margin: 0.5rem;
+}
+.todo__text {
   flex-grow: 1;
-  padding: .5rem;
-
-  background-color: var(--pale-pink);
-  border-radius: .5rem 0 0 .5rem;
+  font-size: 1.25rem;
 }
-.delete__text{
-  width: 2rem;
-  min-width: 2rem;
-  background-color: var(--melon);
-  color: white;
+.todo__deleteBtn {
+  display: block;
+  width: 40px;
+  max-width: 40px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  margin: 0.5rem;
   font-size: 2rem;
-  border-radius: 0 .5rem .5rem 0;
-  cursor: pointer;
+
+  background-color: var(--melon);
+  border-radius: 0.25rem;
 }
-.delete__text:hover,
-.delete__text:active{
+.todo__deleteBtn:hover,
+.todo__deleteBtn:focus {
   background-color: var(--rose-madder);
-  color: white;
+  outline: 0.15rem solid black;
 }
 
 /* ################################# */
 /* ##### LIST CONTROLS STYLES ###### */
 /* ################################# */
 
-#delete-all-btn{
-  padding: .25rem .5rem;
+#delete-all-btn {
+  padding: 0.25rem 0.5rem;
   background-color: var(--melon);
   font-size: 1.2rem;
   color: white;
 
-  border-radius: .25rem;
+  border-radius: 0.1rem;
   cursor: pointer;
 }
 #delete-all-btn:hover,
-#delete-all-btn:active{
+#delete-all-btn:focus {
   background-color: var(--rose-madder);
   color: white;
+  outline: 0.15rem solid black;
 }
 
 /* ################################# */
 /* ##### COMMON ELEMENT STYLES ##### */
 /* ################################# */
-.center__content{
+.center__content {
   display: flex;
   justify-content: center;
   align-items: center;

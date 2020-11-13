@@ -1,37 +1,49 @@
 //import listManager from 'todo.manager.js';
 
-//object with the structure of our specific list content
-let itemContent = (text) => {
-  let listTextNode = document.createElement("p");
-  listTextNode.setAttribute("class", "todo__text center__content");
-  let listTextNodeContent = document.createTextNode(text);
-  listTextNode.appendChild(listTextNodeContent);
-
-  let listDeleteBtn = document.createElement("p");
-  listDeleteBtn.setAttribute("class","delete__text center__content");
-  listDeleteBtn.appendChild(document.createTextNode("x"));
-
-  return [listTextNode, listDeleteBtn];
-}
-
 window.onload = e => {
-  let todoManager = new listManager("todo__list", "todo__item", "delete__text");
-  const TODO_FORM = document.querySelector("#task-add-form");
-  const TASK_INPUT = document.querySelector("#task-add-input");
-
-  const DELETE_TASKS_BTN = document.querySelector("#delete-all-btn");
-
-  TODO_FORM.addEventListener("submit", evt => {
-    evt.preventDefault();
-    if(TASK_INPUT.value.length != ""){
-      todoManager.add(itemContent(TASK_INPUT.value));
-    }else{
-      //error handler for empty container.
-    }
-  });
-
-  DELETE_TASKS_BTN.addEventListener("click", evt => {
-    evt.preventDefault();
-    todoManager.deleteAll();
-  })
+  initApp();
 }
+
+function initApp(){
+  //create to do manager
+  const myApp = new listManager("todo__list");
+
+  //if a list exists add it to the list container
+  //create add item event
+  const addForm = document.querySelector("#task-add-form");
+  const formInput = document.querySelector("#task-add-input");
+  addForm.addEventListener("submit", evt => {
+    evt.preventDefault();
+    if(formInput.value == ""){
+      //add event handler for empty text
+      console.log("cant be empty");
+    }
+    else{
+      myApp.create_And_Update(formInput.value);
+      formInput.value = "";
+    }
+  })
+  //create delete all event
+  const deleteAllBtn = document.querySelector("#delete-all-btn");
+  deleteAllBtn.addEventListener("click", evt=>{
+    myApp.deleteAll();
+  })
+
+  //dummy data entry
+  function dummyEntry(size){
+    var counter = 1;
+    while (counter <= size && size > 0){
+      //cap at 100 items
+      if(counter >= 100){
+        break;
+      }
+      var textValue = `todo item ${counter}`
+      myApp.createItem(textValue);
+      counter++;
+    }
+    myApp.displayList();
+  }
+
+  //dummyEntry(3);
+}
+

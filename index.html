@@ -21,8 +21,8 @@
       <div class="app__section form__section">
         <h2 class="app__title">add item</h2>
         <form action="index.html" method="post" id="task-add-form">
-          <input type="text" name="task-adder" id="task-add-input" maxlength="50" autocomplete="off">
-          <button type="submit" id="task-add-btn">Add Task</button>
+          <input type="text" name="task-adder" id="task-add-input" maxlength="40" autocomplete="off" tabindex="0">
+          <button type="submit" id="task-add-btn" tabindex="0">Add Task</button>
         </form>
       </div>
       <!-- enter todo item section ends-->
@@ -34,29 +34,16 @@
         <h2 class="app__title">Tasks</h2>
 
         <!-- holds list of to do items -->
-        <ul class="todo__list">
+        <ul id="todo__list" class="todo__list">
+          <!-- --------- template item --------- -->
 
-          <li class="todo__item">
-            <p class="todo__text center__content">Item 1</p>
-            <p class="delete__text center__content">x</p>
-          </li>
-          <li class="todo__item">
-            <p class="todo__text center__content">Item 2</p>
-            <p class="delete__text center__content">x</p>
-          </li>
-          <li class="todo__item">
-            <p class="todo__text center__content">Item 3</p>
-            <p class="delete__text center__content">x</p>
-          </li>
-          <li class="todo__item">
-            <p class="todo__text center__content">Item 4</p>
-            <p class="delete__text center__content">x</p>
-          </li>
-          <li class="todo__item">
-            <p class="todo__text center__content">Item 5</p>
-            <p class="delete__text center__content">x</p>
-          </li>
+          <!-- <li class="todo__item">
+            <input type="checkbox" class="todo__checkbox"/>
+            <p class="todo__text">This item is 40 characters long i think so.</p>
+            <button class="todo__deleteBtn" tabindex="0">x</button>
+          </li> -->
 
+          <!-- -----X---- Template item ends -----X---- -->
         </ul>
 
       </div>
