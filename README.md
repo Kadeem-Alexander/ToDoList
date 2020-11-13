@@ -21,4 +21,4 @@ Possible Addons:
 * [x] save task locally on the browser.
 
 ## V 1.1.0
-Restructured the list manager class and improved deletion events, made the functionality more modular as well as added checkboxes to the list item however they are disabled unitl i can find a proper structure to store the information in.
+Restructured the list manager class and improved deletion events, made the functionality more modular as well as added checkboxes to the list item however they are disabled unitl i can find a proper structure to store the information in.cd

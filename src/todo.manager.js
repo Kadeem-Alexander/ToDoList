@@ -118,6 +118,7 @@ class listManager{
     }
     //remove all items from list
     this.clearList();
+    this.updateWebstorage();
   }
 
   updateList(text){
